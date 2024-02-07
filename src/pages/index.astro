@@ -5,35 +5,72 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="TODO AOI">
   <main>
     <h1><span class="text-gradient">TODO AOI</span></h1>
+
+    <div class="todo-quote">
+      “The sound of gion shoja bells echoes the impermanence of all things. The
+      color of sala flowers reveals the truth that the prosperous must decline.
+      <br />
+      <br />
+      However! We are the exception!”
+    </div>
+
     <div class="img-grid">
-      <div class="grid-el"><img class="todo-img" src="todo-one.webp" /></div>
-      <div class="grid-el"><img class="todo-img" src="todo-one-2.webp" /></div>
-      <div class="grid-el"><img class="todo-img" src="todo-takaba.gif" /></div>
       <div class="grid-el">
-        <img class="todo-img" src="aoi-todo-todo.gif" />
+        <img class="todo-img" src="todoaoi/images/todo-one.webp" />
       </div>
       <div class="grid-el">
-        <img class="todo-img" src="jujutsu-kaisen-aoi-takada.jpg" />
+        <img class="todo-img" src="todoaoi/images/todo-one-2.webp" />
+      </div>
+      <div class="grid-el">
+        <img class="todo-img" src="todoaoi/images/todo-takaba.gif" />
+      </div>
+      <div class="grid-el">
+        <img class="todo-img" src="todoaoi/images/aoi-todo-todo.gif" />
+      </div>
+      <div class="grid-el">
+        <img
+          class="todo-img"
+          src="todoaoi/images/jujutsu-kaisen-aoi-takada.jpg"
+        />
       </div>
       <div class="grid-el-3">
-        <img class="todo-img" src="todo-clap.gif" />
+        <img class="todo-img" src="todoaoi/images/todo-clap.gif" />
       </div>
     </div>
   </main>
 </Layout>
 
 <style>
+  @font-face {
+    font-family: "manga";
+    src: url("todoaoi/fonts/mangat.ttf") format("truetype");
+  }
+
+  .text-header {
+    font-family: manga;
+    color: rgb(161, 80, 80);
+  }
+
   .grid-el-3 {
     grid-column-end: 4;
   }
 
-  .img-grid {
+  .todo-quote {
+    font-family: manga;
     margin: auto;
-    text-align: center;
-    width: 100%;
+    color: rgb(236, 236, 236);
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 50vw;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+  }
+
+  .img-grid {
     display: grid;
     row-gap: 50px;
-    grid-template-rows: auto;
+    justify-content: center;
+    column-gap: 20px;
   }
 
   .todo-img {
